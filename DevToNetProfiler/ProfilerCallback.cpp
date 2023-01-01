@@ -130,11 +130,11 @@ void ProfilerCallback::FinalRelease()
 {
 }
 
+CComQIPtr<ICorProfilerInfo> pICorProfilerInfo;
+CComQIPtr<ICorProfilerInfo2> pICorProfilerInfo2;
+
 HRESULT __stdcall ProfilerCallback::Initialize(IUnknown* pICorProfilerInfoUnk)
 {
-    ICorProfilerInfo* pICorProfilerInfo;
-    ICorProfilerInfo2* pICorProfilerInfo2;
-
     BOOST_SCOPE_EXIT(&pICorProfilerInfo)
     {
         MethodList::getIncetance().Initialize(pICorProfilerInfo);
