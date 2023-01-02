@@ -4,8 +4,8 @@
 //
 
 #define IDS_PROJNAME                    100
-#define IDR_DEVTONETPROFILER      101
-#define IDR_PROFILER	102
+#define IDR_DEVTONETPROFILER			101
+#define IDR_PROFILER					102
 
 // Nächste Standardwerte für neue Objekte
 //
