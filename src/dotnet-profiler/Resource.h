@@ -1,13 +1,13 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Verwendet von DevToNetProfiler.rc
+// Used by dotnet-profiler.rc
 //
 
 #define IDS_PROJNAME                    100
-#define IDR_DEVTONETPROFILER			101
+#define IDR_DOTNETPROFILER				101
 #define IDR_PROFILER					102
 
-// Nächste Standardwerte für neue Objekte
+// Next default values for new objects
 //
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS

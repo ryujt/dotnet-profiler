@@ -1,14 +1,14 @@
-// dllmain.cpp : Implementierung von DllMain.
+// dllmain.cpp : Implementation of DllMain.
 
 #include "pch.h"
 #include "framework.h"
 #include "resource.h"
-#include "DevToNetProfiler_i.h"
+#include "dotnetprofiler_i.h"
 #include "dllmain.h"
 
-CDevToNetProfilerModule _AtlModule;
+CdotnetprofilerModule _AtlModule;
 
-// DLL-Einstiegspunkt
+// DLL Entry Point
 extern "C" BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 {
 	hInstance;

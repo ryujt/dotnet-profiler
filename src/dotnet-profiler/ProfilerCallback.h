@@ -3,7 +3,7 @@
 #include "cor.h"
 #include "corprof.h"
 #include "framework.h"
-#include "DevToNetProfiler_i.h"
+#include "dotnetprofiler_i.h"
 
 class ATL_NO_VTABLE ProfilerCallback :
   public CComObjectRootEx<CComSingleThreadModel>,

@@ -6,9 +6,9 @@
  /* File created by MIDL compiler version 8.01.0622 */
 /* at Tue Jan 19 12:14:07 2038
  */
-/* Compiler settings for DevToNetProfiler.idl:
-    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.01.0622 
-    protocol : dce , ms_ext, c_ext, robust
+/* Compiler settings for dotnetprofiler.idl:
+    Oicf, W1, Zp8, env=Win64 (32b run), target_arch=AMD64 8.01.0622 
+    protocol : all , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
     VC __declspec() decoration level: 
          __declspec(uuid()), __declspec(selectany), __declspec(novtable)
@@ -35,8 +35,8 @@
 #include "ole2.h"
 #endif /*COM_NO_WINDOWS_H*/
 
-#ifndef __DevToNetProfiler_i_h__
-#define __DevToNetProfiler_i_h__
+#ifndef __dotnetprofiler_i_h__
+#define __dotnetprofiler_i_h__
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
@@ -76,14 +76,14 @@ extern "C"{
 #define __IProfiler_INTERFACE_DEFINED__
 
 /* interface IProfiler */
-/* [unique][helpstring][uuid][object] */ 
+/* [object][version][uuid] */ 
 
 
 EXTERN_C const IID IID_IProfiler;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
-    MIDL_INTERFACE("103d660d-1cb4-4410-85dd-67b3aa489626")
+    MIDL_INTERFACE("5bbe4e9a-cb29-4446-a431-33c2c8604778")
     IProfiler : public IUnknown
     {
     public:

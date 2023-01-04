@@ -1,17 +1,15 @@
-// DevToNetProfiler.idl: IDL-Quelle für DevToNetProfiler
+// dotnet-profiler.idl : IDL source for dotnet-profiler
 //
 
-// Diese Datei wird mit dem MIDL-Tool bearbeitet,
-// generieren die Typbibliothek (DevToNetProfiler.tlb) und den Marshallingcode.
+// This file will be processed by the MIDL tool to
+// produce the type library (dotnetprofiler.tlb) and marshalling code.
 
 import "oaidl.idl";
 import "ocidl.idl";
 
 [
-	object,
-	uuid(103d660d-1cb4-4410-85dd-67b3aa489626),
-	helpstring("INetProfiler Interface"),
-	pointer_default(unique)
+	uuid(5bbe4e9a-cb29-4446-a431-33c2c8604778),
+	version(1.0),
 ]
 interface IProfiler : IUnknown {
 };

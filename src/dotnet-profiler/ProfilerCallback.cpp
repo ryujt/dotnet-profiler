@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "ProfilerCallback.h"
 #include "MethodList.hpp"
-#include <boost/scope_exit.hpp>
 #include <iostream>
 
 using namespace std;
@@ -135,28 +134,22 @@ CComQIPtr<ICorProfilerInfo2> pICorProfilerInfo2;
 
 HRESULT __stdcall ProfilerCallback::Initialize(IUnknown* pICorProfilerInfoUnk)
 {
-    BOOST_SCOPE_EXIT(&pICorProfilerInfo)
-    {
-        MethodList::getIncetance().Initialize(pICorProfilerInfo);
-    }
-    BOOST_SCOPE_EXIT_END;
-
     HRESULT hr = pICorProfilerInfoUnk->QueryInterface(IID_ICorProfilerInfo, (LPVOID*) &pICorProfilerInfo);
     if (FAILED(hr)) {
-        cout << "Error - pICorProfilerInfoUnk->QueryInterface" << endl;
+        cout << "Error - QueryInterface(IID_ICorProfilerInfo)" << endl;
         return S_FALSE;
     }
 
     hr = pICorProfilerInfoUnk->QueryInterface(IID_ICorProfilerInfo2, (LPVOID*) &pICorProfilerInfo2);
     if (FAILED(hr)) {
-        cout << "Error - pICorProfilerInfoUnk->QueryInterface" << endl;
+        cout << "Error - QueryInterface(IID_ICorProfilerInfo2)" << endl;
         return S_FALSE;
     }
 
     DWORD eventMask = (DWORD) (COR_PRF_MONITOR_ENTERLEAVE);
     hr = pICorProfilerInfo->SetEventMask(eventMask);
     if (FAILED(hr)) {
-        cout << "Error - pICorProfilerInfoUnk->QueryInterface" << endl;
+        cout << "Error - SetEventMask" << endl;
         return S_FALSE;
     }
 
